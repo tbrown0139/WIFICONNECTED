@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Ruff Ranch - North Shore's Premier Mobile Dog Daycare Bus. Experience the adventure with Hawaii's most unique pet service.">
+    <meta name="theme-color" content="#4FD1C5">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="dog daycare oahu, north shore dog care, hawaii pup bus, mobile dog daycare, pet services north shore">
+    <meta property="og:title" content="About Ruff Ranch | North Shore Pup Bus">
+    <meta property="og:description" content="Discover the Ruff Ranch experience - where every dog's adventure begins on North Shore, Oahu.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    <title>About Us | Ruff Ranch - North Shore Pup Bus</title>
+    
+    <style>
+        :root {
+            --primary: #4FD1C5;
+            --text: #2D3748;
+            --background: #F7FAFC;
+            --card-bg: rgba(255, 255, 255, 0.92);
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: 
+                linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.4)
+                ),
+                url('bg.jpg') center/cover no-repeat fixed;
+            background-attachment: scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1rem;
+            color: white;
+            text-align: center;
+            margin-bottom: -2rem;
+        }
+
+        .hero-content {
+            transform: translateY(-10%);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(-10%);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            max-width: 600px;
+            line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 32px 32px 0 0;
+            padding: 3rem 1.5rem;
+            margin-top: -2rem;
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        .section {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            padding: 0 1rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: var(--text);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .section p {
+            color: #4A5568;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            color: var(--text);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .feature p {
+            color: #4A5568;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text);
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: transform 0.2s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.875rem;
+            color: var(--text);
+        }
+
+        .footer .powered-by {
+            display: none;
+        }
+
+        .footer a {
+            color: rgba(200, 200, 200, 0.8);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .footer a:hover {
+            opacity: 0.8;
+            color: #cccccc;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        .powered-by-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .powered-by-badge a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .powered-by-badge a:hover {
+            color: white;
+            opacity: 1;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 1.5rem 0;
+            padding: 0;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: #4A5568;
+            line-height: 1.6;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .hero .logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            background: url('Knovon_black.png') center/contain no-repeat;
+            filter: brightness(0) invert(1);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back</a>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <div class="logo" role="img" aria-label="Knovon Network Logo"></div>
+            <h1>Knovon Network</h1>
+            <p>High-Speed Guest Internet Access</p>
+        </div>
+    </div>
+
+    <main class="content">
+        <section class="section">
+            <h2>Our Network</h2>
+            <p>Welcome to Knovon Network, your complimentary gateway to high-speed internet connectivity. As our guest, you'll experience exceptional internet access completely free of charge. Our state-of-the-art visitor network ensures you stay connected with the best possible experience.</p>
+            <p>With our cutting-edge technology and commitment to service, we deliver lightning-fast speeds and reliable connectivity to keep you connected to what matters most.</p>
+        </section>
+
+        <section class="section">
+            <h2>Network Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-emoji">⚡</div>
+                    <h3>1Gbps Speed</h3>
+                    <p>Lightning-fast gigabit speeds available to all connected devices.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-emoji">📱</div>
+                    <h3>Unlimited Devices</h3>
+                    <p>Connect all your devices with no restrictions per user.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-emoji">🛡️</div>
+                    <h3>AI Protection</h3>
+                    <p>Enhanced OnNetwork AI actively filters threats and protects your connection. Also available via VPN on the go.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-emoji">💰</div>
+                    <h3>100% Free</h3>
+                    <p>High-speed internet access at no cost to our visitors.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>AI-Powered Security</h2>
+            <p>Our network is equipped with advanced artificial intelligence that works around the clock to ensure your safety online. The OnNetwork AI system actively monitors and protects against various threats:</p>
+            <ul class="feature-list">
+                <li>Real-time threat detection and prevention</li>
+                <li>Automatic filtering of malicious content</li>
+                <li>Protection against third-party tracking</li>
+                <li>Ad blocking and spam prevention</li>
+                <li>Available through our VPN service for protection anywhere</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Our Commitment</h2>
+            <p>At Knovon Network, we're committed to breaking down barriers to internet access. Our mission is to provide fast, reliable, and free internet connectivity to everyone within our network coverage. We believe that access to high-speed internet should be readily available to all.</p>
+        </section>
+
+        <footer class="footer">
+            <div>© <span id="year"></span> Knovon Network. All rights reserved.</div>
+            <div class="powered-by-badge">
+                Powered by <a href="https://knovon.org" target="_blank" rel="noopener">Knovon</a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html> 

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#4FD1C5">
+    
+    <!-- Update SEO Meta Tags -->
+    <meta property="og:title" content="Knovon Network">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Remove unnecessary preloads -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" as="style">
+    
+    <title>Knovon Network</title>
+    
+    <!-- Critical CSS inline for faster paint -->
+    <style>
+        :root {
+            --primary: #4FD1C5;
+            --text: #2D3748;
+            --background: #F7FAFC;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: 
+                linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.4)
+                ),
+                url('bg.jpg') center/cover no-repeat fixed;
+            /* Optimize for mobile */
+            background-attachment: scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            display: grid;
+            place-items: center;
+            padding: 1rem;
+        }
+
+        .container {
+            width: min(100%, 24rem);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            background: url('Knovon_black.png') center/contain no-repeat;
+        }
+
+        h1 {
+            color: var(--text);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--text);
+            padding: 1rem;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            background: white;
+        }
+
+        .button span {
+            font-size: 1.25rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .button, .container {
+                animation: none;
+                transition: none;
+            }
+        }
+
+        /* Add new footer styles */
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer .powered-by {
+            display: none;
+        }
+
+        .footer a {
+            color: rgba(200, 200, 200, 0.8);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .footer a:hover {
+            opacity: 0.8;
+            color: #cccccc;
+        }
+
+        .powered-by-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .powered-by-badge a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .powered-by-badge a:hover {
+            color: white;
+            opacity: 1;
+        }
+
+        /* Update connection error styles */
+        .connection-error {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .connection-error.visible {
+            display: block;
+        }
+
+        .wifi-logo {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: #DC2626; /* Red color */
+        }
+
+        .error-message {
+            color: #DC2626;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .contact-support {
+            color: #4B5563;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Add class for error state background */
+        body.connection-error-state {
+            background: #F3F4F6 !important; /* Light gray */
+            background-image: none !important;
+        }
+
+        .main-content {
+            display: block;
+        }
+
+        .main-content.hidden {
+            display: none;
+        }
+
+        .retry-message {
+            color: #4B5563;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        @keyframes dotsAnimation {
+            0% { content: '.'; }
+            33% { content: '..'; }
+            66% { content: '...'; }
+            100% { content: ''; }
+        }
+
+        .retry-dots {
+            display: inline-block;
+            width: 1em;
+            animation: dotsAnimation 1.5s infinite;
+        }
+
+        .button-secondary {
+            background: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            padding: 0.75rem 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .button-secondary:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <main class="container">
+        <div class="connection-error">
+            <div class="wifi-logo">📡</div>
+            <div class="error-message">Internet Connection Unstable</div>
+            <div class="contact-support">Please contact Knovon Tech for assistance</div>
+            <div class="retry-message">Retrying connection... <span class="retry-dots">...</span></div>
+        </div>
+
+        <div class="main-content">
+            <div class="card">
+                <div class="logo" role="img" aria-label="Knovon Network Logo"></div>
+                <h1>You are Connected</h1>
+                <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text);">
+                    You now have access to the internet
+                </p>
+                <div class="button-group">
+                    <a href="about.html" class="button">
+                        <span>📡</span>
+                        About Your Connection
+                    </a>
+                    <a href="/services" class="button">
+                        <span>🌐</span>
+                        Recommended Services
+                    </a>
+                    <a href="/account" class="button">
+                        <span>👤</span>
+                        My Account
+                    </a>
+                    <a href="terms.html" class="button button-secondary">
+                        <span>📋</span>
+                        Terms of Service
+                    </a>
+                </div>
+            </div>
+            <footer class="footer">
+                <div>© <span id="year"></span> Knovon Network. All rights reserved.</div>
+                <div class="powered-by-badge">
+                    Powered by <a href="https://knovon.org" target="_blank" rel="noopener">Knovon</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function fireConfetti() {
+            const duration = 2000;
+            const end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 2,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: ['#4FD1C5', '#38B2AC', '#319795']
+                });
+                confetti({
+                    particleCount: 2,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: ['#4FD1C5', '#38B2AC', '#319795']
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        }
+
+        function checkConnection() {
+            const mainContent = document.querySelector('.main-content');
+            const errorMessage = document.querySelector('.connection-error');
+            let retryCount = 0;
+            let wasOffline = false;
+            
+            function updateConnectionStatus() {
+                if (navigator.onLine) {
+                    fetch('https://www.google.com/favicon.ico', {
+                        mode: 'no-cors',
+                    })
+                    .then(() => {
+                        mainContent.classList.remove('hidden');
+                        errorMessage.classList.remove('visible');
+                        document.body.classList.remove('connection-error-state');
+                        retryCount = 0;
+                        
+                        // Fire confetti if this is first load or connection was restored
+                        if (!sessionStorage.getItem('confettiShown') || wasOffline) {
+                            fireConfetti();
+                            sessionStorage.setItem('confettiShown', 'true');
+                            wasOffline = false;
+                        }
+                    })
+                    .catch(handleConnectionError);
+                } else {
+                    handleConnectionError();
+                }
+            }
+
+            function handleConnectionError() {
+                mainContent.classList.add('hidden');
+                errorMessage.classList.add('visible');
+                document.body.classList.add('connection-error-state');
+                wasOffline = true;
+                retryCount++;
+                console.log(`Retry attempt: ${retryCount}`);
+            }
+
+            // Initial check
+            updateConnectionStatus();
+
+            // Listen for connection changes
+            window.addEventListener('online', updateConnectionStatus);
+            window.addEventListener('offline', handleConnectionError);
+
+            // Regular connection check every 5 seconds
+            setInterval(updateConnectionStatus, 5000);
+        }
+
+        window.addEventListener('load', checkConnection);
+    </script>
+</body>
+</html>

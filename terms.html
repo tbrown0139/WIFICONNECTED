@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#4FD1C5">
+    
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Terms of Service - Knovon Network">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" as="style">
+    
+    <title>Terms of Service - Knovon Network</title>
+    
+    <style>
+        :root {
+            --primary: #4FD1C5;
+            --text: #2D3748;
+            --background: #F7FAFC;
+            --card-bg: rgba(255, 255, 255, 0.92);
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: 
+                linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.4)
+                ),
+                url('bg.jpg') center/cover no-repeat fixed;
+            background-attachment: scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+        }
+
+        .hero {
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1rem;
+            color: white;
+            text-align: center;
+            margin-bottom: -2rem;
+        }
+
+        .hero-content {
+            transform: translateY(-10%);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            max-width: 600px;
+            line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 32px 32px 0 0;
+            padding: 3rem 1.5rem;
+            margin-top: -2rem;
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        .section {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            padding: 0 1rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: var(--text);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .section p {
+            color: #4A5568;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section ul {
+            color: #4A5568;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+        }
+
+        .section li {
+            margin-bottom: 1rem;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text);
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: transform 0.2s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.875rem;
+            color: var(--text);
+        }
+
+        .powered-by-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .powered-by-badge a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .powered-by-badge a:hover {
+            color: white;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        .hero .logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            background: url('Knovon_black.png') center/contain no-repeat;
+            filter: brightness(0) invert(1); /* Make logo white for dark background */
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back</a>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <div class="logo" role="img" aria-label="Knovon Network Logo"></div>
+            <h1>Terms of Service</h1>
+            <p>Please read these terms carefully before using our network</p>
+        </div>
+    </div>
+
+    <main class="content">
+        <section class="section">
+            <h2>Acceptance of Terms</h2>
+            <p>By accessing and using the Knovon Network services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
+        </section>
+
+        <section class="section">
+            <h2>Network Usage Guidelines</h2>
+            <ul>
+                <li><strong>Fair Usage:</strong> While we offer unlimited device connections, we expect users to maintain reasonable usage patterns that don't negatively impact other users' experience.</li>
+                <li><strong>Prohibited Activities:</strong> Users must not engage in any illegal activities, including but not limited to downloading copyrighted material, spreading malware, or attempting to breach network security.</li>
+                <li><strong>Network Security:</strong> Users are responsible for maintaining the security of their own devices and should not attempt to compromise network infrastructure.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Privacy & Data Collection</h2>
+            <p>We collect minimal data necessary for network operations and security. This includes connection timestamps, device identifiers, and basic usage metrics. We do not monitor or store your browsing history or personal communications.</p>
+        </section>
+
+        <section class="section">
+            <h2>Network Monitoring & AI Protection</h2>
+            <p>Our network employs advanced artificial intelligence systems to protect users and maintain network integrity. By using our service, you acknowledge and agree to the following:</p>
+            <ul>
+                <li><strong>Traffic Monitoring:</strong> We reserve the right to throttle, disconnect, or track any and all online activity while connected to this network.</li>
+                <li><strong>AI Protection:</strong> Our network utilizes artificial intelligence to detect and prevent malicious activities, inappropriate content, and security threats in real-time.</li>
+                <li><strong>Automated Enforcement:</strong> Our systems automatically detect bad actors or inappropriate internet use and may block, report, or intercept connections without prior notice.</li>
+                <li><strong>Enhanced Security:</strong> Our AI technology actively works to prevent third-party tracking, unwanted advertisements, and potential virus threats on our network.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Service Availability & Control</h2>
+            <p>While we strive to maintain 1Gbps speeds and constant availability, network performance may vary based on user load, environmental factors, and maintenance requirements. We maintain full control over network resources and may adjust service parameters as needed to ensure optimal performance for all users.</p>
+            <ul>
+                <li><strong>Traffic Management:</strong> We may implement traffic shaping, prioritization, or throttling to maintain network quality.</li>
+                <li><strong>Access Control:</strong> We reserve the right to terminate or restrict access for any reason, particularly in cases of detected misuse or security concerns.</li>
+                <li><strong>Service Modifications:</strong> We may modify, suspend, or terminate any aspect of our service at any time to maintain network integrity and security.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Disclaimer of Warranty</h2>
+            <p>The network service is provided "as is" without warranties of any kind. We are not responsible for any damages or losses resulting from the use of our network.</p>
+        </section>
+
+        <footer class="footer">
+            <div>© <span id="year"></span> Knovon Network. All rights reserved.</div>
+            <div class="powered-by-badge">
+                Powered by <a href="https://knovon.org" target="_blank" rel="noopener">Knovon</a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html> 
